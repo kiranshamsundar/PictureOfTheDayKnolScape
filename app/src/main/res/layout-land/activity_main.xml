@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="10dp">
+
+
+        <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:context=".mainscreen.PicOfTheDayActivity">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nebula" />
+
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:text="21/03/2016" />
+
+
+            <ImageView
+                android:id="@+id/pic_of_day"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/date"
+                android:layout_gravity="center"
+                android:background="@drawable/border"
+                android:padding="10dp"
+                android:src="@mipmap/nasalogo" />
+
+            <TextView
+                android:id="@+id/explanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pic_of_day"
+                android:text="A mere 20,000 light-years from the Sun lies NGC 3603, a resident of the nearby Carina spiral arm of our Milky Way Galaxy. NGC 3603 is well known to astronomers as one of the Milky Way's largest star-forming regions. The central open star cluster contains thousands of stars more massive than our Sun, stars that likely formed only one or two million years ago in a single burst of star formation. In fact, nearby NGC 3603 is thought to contain a convenient example of the massive star clusters that populate much more distant starburst galaxies. Surrounding the cluster are natal clouds of glowing interstellar gas and obscuring dust, sculpted by energetic stellar radiation and winds. Recorded by the Hubble Space Telescope, the image spans about 17 light-years.   Follow APOD on: Facebook,  Google Plus,  Instagram, or Twitter" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
