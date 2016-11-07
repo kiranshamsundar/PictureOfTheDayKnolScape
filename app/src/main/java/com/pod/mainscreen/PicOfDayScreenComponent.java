@@ -7,7 +7,7 @@ import com.pod.util.CustomScope;
 import dagger.Component;
 
 @CustomScope
-@Component(dependencies = NetComponent.class, modules = MainScreenModule.class)
-public interface MainScreenComponent {
+@Component(dependencies = NetComponent.class, modules = PicOfTheDayScreenModule.class)
+public interface PicOfDayScreenComponent {
     void inject(PicOfTheDayActivity activity);
 }

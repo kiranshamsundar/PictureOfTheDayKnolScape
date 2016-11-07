@@ -19,14 +19,14 @@ import java.io.FileInputStream;
 
 import javax.inject.Inject;
 
-public class PicOfTheDayActivity extends AppCompatActivity implements MainScreenContract.View {
+public class PicOfTheDayActivity extends AppCompatActivity implements PicOfTheDayScreenContract.View {
     private ImageView pictureOfTheDayView;
     private TextView titleOfPic;
     private TextView date;
     private TextView explaination;
 
     @Inject
-    MainScreenPresenter mainPresenter;
+    PicOfTheDayPresenter mainPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +37,9 @@ public class PicOfTheDayActivity extends AppCompatActivity implements MainScreen
         explaination = (TextView) findViewById(R.id.explanation);
         date = (TextView) findViewById(R.id.date);
 
-        DaggerMainScreenComponent.builder()
+        DaggerPicOfDayScreenComponent.builder()
                 .netComponent(((App) getApplicationContext()).getNetComponent())
-                .mainScreenModule(new MainScreenModule(this))
+                .picOfTheDayScreenModule(new PicOfTheDayScreenModule(this))
                 .build().inject(this);
 
         mainPresenter.loadPicOfTheDay();

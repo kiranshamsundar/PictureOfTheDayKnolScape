@@ -5,7 +5,7 @@ import android.net.Uri;
 import com.pod.App;
 import com.pod.data.PictureInfo;
 
-public interface MainScreenContract {
+public interface PicOfTheDayScreenContract {
 
     interface View {
         void showPicOfTheDay(Uri imageUri);

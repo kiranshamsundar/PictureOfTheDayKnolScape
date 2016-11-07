@@ -31,16 +31,16 @@ import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class MainScreenPresenter implements MainScreenContract.Presenter {
+public class PicOfTheDayPresenter implements PicOfTheDayScreenContract.Presenter {
 
     public Retrofit retrofit;
-    private MainScreenContract.View mView;
+    private PicOfTheDayScreenContract.View mView;
     private App app;
     private PictureInfo picInfo;
     private String NEED_SERVER_REQUEST = "needToHitServer";
 
     @Inject
-    public MainScreenPresenter(Retrofit retrofit, MainScreenContract.View mView) {
+    public PicOfTheDayPresenter(Retrofit retrofit, PicOfTheDayScreenContract.View mView) {
         this.retrofit = retrofit;
         this.mView = mView;
         this.app = mView.getApplicationRef();
